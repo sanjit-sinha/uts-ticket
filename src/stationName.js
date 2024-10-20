@@ -1,4 +1,4 @@
-{
+let station_name = {
   "AA": {
     "serial_nummber": 0,
     "english_name": "ATARIA",
