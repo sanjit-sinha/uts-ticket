@@ -1,4 +1,4 @@
-let stationNameList = [
+let stationNameList =  [
   {
     "stationCode": "AA",
     "englishName": "ATARIA",
