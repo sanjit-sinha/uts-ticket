@@ -232,7 +232,7 @@
 
             input[type="datetime-local"]::-webkit-calendar-picker-indicator {
                 color: rgb(255, 255, 255);
-                content: url(.assets/svg/calendar-svgrepo-com.svg);
+                content: url(/assets/svg/calendar-svgrepo-com.svg);
             }
         </style>
     </head>
@@ -308,6 +308,13 @@
                     >Generate Ticket</span
                 >
             </button>
+
+        <div class="reset-button">
+            <button>
+                <span class="button_top" onclick="resetButton()"
+                    >Reset Button</span
+                >
+            </button>
         </div>
         <script src="/assets/stationNameList.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
@@ -373,6 +380,24 @@
                 });
             }
 
+            function resetButton() {
+                const fareAmount = document.querySelector("#amount");
+                const mobileNumber = document.querySelector("#mobileNumber");
+                let dateTime = document.querySelector("#dateTime");
+                const fromStation = document.querySelector(
+                    "#station-search-bar-1"
+                );
+                const toStation = document.querySelector(
+                    "#station-search-bar-2"
+                );
+
+                fareAmount.value = "";
+                mobileNumber.value = "";
+                dateTime.value = "";
+                fromStation.value = "";
+                toStation.value = "";
+            }
+
             function passInputValue() {
                 const fareAmount = document.querySelector("#amount").value;
                 const mobileNumber =
@@ -392,7 +417,27 @@
 
                 fromStationCode = fromStation.split("-")[0].trim();
                 toStationCode = toStation.split("-")[0].trim();
-                console.log(refIndex);
+
+
+                if (!toStation || !fromStation) {
+                    alert("Please select both starting and ending stations.");
+                    return;
+                }
+
+                if (!fareAmount || fareAmount > 400) {
+                    alert("Please enter a valid fare amount (up to 400).");
+                    return;
+                }
+
+                if (!mobileNumber || mobileNumber.length !== 10) {
+                    alert("Please enter a 10-digit mobile number.");
+                    return;
+                }
+
+                if (!dateTime) {
+                    alert("Please select the date and time of the journey.");
+                    return;
+                }
 
                 sessionStorage.setItem(
                     "myDict",
