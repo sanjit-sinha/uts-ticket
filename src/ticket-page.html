@@ -28,6 +28,7 @@
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
+                height: 800px;
             }
 
             .ticket-container-1 {
@@ -44,7 +45,7 @@
                 border-radius: 0 0 7px 7px;
                 width: 365px;
                 box-shadow: 0 4px 8px rgba(33, 33, 33, 0.1);
-                margin-bottom: 50px;
+                margin-bottom: 70px;
             }
 
             .ticket-info-1 {
@@ -119,19 +120,6 @@
             .btn:hover {
                 opacity: 0.9;
             }
-            footer {
-            }
-
-            /* footer {
-                position: fixed;
-                bottom: 0;
-                /* left: 0; */
-            /* width: 100%; */
-            /* background-color: #333; 
-                color: rgb(0, 0, 0);
-                text-align: center;
-                padding: 10px;
-            } */
 
             .scrolling-text {
                 position: absolute;
@@ -145,17 +133,17 @@
             /* Keyframes for text animation */
             @keyframes scroll-text {
                 from {
-                    transform: translateX(100%);
+                    transform: translateX(100px);
                 }
                 to {
-                    transform: translateX(-100%);
+                    transform: translateX(-10%);
                 }
             }
         </style>
     </head>
 
     <body>
-       
+        <!-- <div class="scrolling-text">IR Unreserved Ticketing</div> -->
         <div class="ticket-container-1" id="ticket">
             <div style="text-align: left; padding-bottom: 12px">
                 HAPPY JOURNEY
@@ -304,8 +292,7 @@
             </div>
         </div>
 
-
-        
+        <footer>Center for Railway Information Systems (CRICS)</footer>
         <script src="/assets/stationNameDict.js"></script>
 
         <script>
