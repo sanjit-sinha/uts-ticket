@@ -308,18 +308,18 @@
         <script src="/assets/stationNameDict.js"></script>
 
         <script>
-            document
-                .getElementById("download-btn")
-                .addEventListener("click", function () {
-                    html2canvas(document.getElementById("capture-area")).then(
-                        (canvas) => {
-                            const link = document.createElement("a");
-                            link.href = canvas.toDataURL("image/png");
-                            link.download = "train_ticket_screenshot.png";
-                            link.click();
-                        }
-                    );
-                });
+            // document
+            //     .getElementById("download-btn")
+            //     .addEventListener("click", function () {
+            //         html2canvas(document.getElementById("capture-area")).then(
+            //             (canvas) => {
+            //                 const link = document.createElement("a");
+            //                 link.href = canvas.toDataURL("image/png");
+            //                 link.download = "train_ticket_screenshot.png";
+            //                 link.click();
+            //             }
+            //         );
+            //     });
             
             const fullscreenButton = document.getElementById("fullscreen-btn");
 
