@@ -164,6 +164,473 @@
                 height: auto;
                 z-index: 2; /* Place images above the text */
                 margin-top: 8px;
+            }
+
+            .left-image {
+                left: 0;
+                margin-left: 7px;
+            }
+
+            .right-image {
+                right: 0;
+                margin-right: 7px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="capture-area">
+            <div class="header-container">
+                <!-- <img
+                    src="/assets/images/indianrailway_uts.png"
+                    style="
+                        position: absolute;
+                        transform: translateY(-50%);
+                        float: right;
+                        width: 30px;
+                        height: auto;
+                        margin-top: 8px;
+                        margin-right: 9px;
+                        z-index: 1;
+                    "
+                />
+                <img
+                    src="/assets/images/cris_uts.png"
+                    style="
+                        float: left;
+                        width: 30px;
+                        height: auto;
+                        margin-top: 8px;
+                        margin-left: 9px;
+                        z-index: 1;
+                    "
+                /> -->
+
+                <img
+                    src="/assets/images/cris_uts.png"
+                    alt="Left Image"
+                    class="left-image"
+                />
+                <div class="scrolling-text">IR Unreserved Ticketing</div>
+                <img
+                    src="/assets/images/indianrailway_uts.png"
+                    alt="Right Image"
+                    class="right-image"
+                />
+            </div>
+
+            <div class="ticket-container-1" id="ticket">
+                <div style="text-align: left; padding-bottom: 12px">
+                    HAPPY JOURNEY
+                </div>
+                <div class="ticket-info-1">
+                    <div
+                        style="
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        "
+                    >
+                        JOURNEY
+                    </div>
+                    <div style="text-align: right" id="date">19/10/2024</div>
+                    <div style="position: absolute" id="fareAmount">
+                        ₹75.00/-
+                    </div>
+                    <div style="text-align: right" id="mobileNumber">
+                        8092068857
+                    </div>
+                    <div style="position: absolute">UTS No: XHCTDWW209</div>
+                </div>
+
+                <div class="ticket-info-2">
+                    <svg
+                        style="display: inline-block; padding-right: 5px"
+                        class="svg-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                    >
+                        <circle cx="12" cy="12" r="12" fill="#861880" />
+                        <text
+                            x="12"
+                            y="17"
+                            font-family="Arial"
+                            font-size="15"
+                            fill="#fff"
+                            text-anchor="middle"
+                        >
+                            S
+                        </text>
+                    </svg>
+                    <div id="fromStation" style="display: inline-block">
+                        <span>बक्सर<br />BUXAR</span>
+                    </div>
+                    <br />
+
+                    <div style="padding-top: 11px">
+                        <svg
+                            style="display: inline-block; padding-right: 5px"
+                            class="svg-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                        >
+                            <circle cx="12" cy="12" r="12" fill="#861880" />
+                            <text
+                                x="12"
+                                y="17"
+                                font-family="Arial"
+                                font-size="15"
+                                fill="#fff"
+                                text-anchor="middle"
+                            >
+                                D
+                            </text>
+                        </svg>
+                        <div style="display: inline-block" id="toStation">
+                            <span>पटना जं.<br />PATNA Jn.</span>
+                        </div>
+                    </div>
+
+                    <div style="text-align: left; padding-top: 7px">
+                        Adult: 1 &nbsp; Child: 0
+                    </div>
+                    <div
+                        style="
+                            text-align: left;
+                            position: absolute;
+                            padding-top: 5px;
+                        "
+                    >
+                        <span class="medium-text-2">CLASS:</span>SECOND
+                    </div>
+                    <div style="text-align: right; padding-top: 5px">
+                        <span class="medium-text-1">TRAIN TYPE:</span>
+                        <span id="trainType">SUPERFAST</span>
+                    </div>
+                </div>
+
+                <div class="ticket-info-3">
+                    <div style="position: absolute; padding-left: 120px">
+                        <span class="medium-text-1">IR:</span>10AAAGM0289CIZY
+                    </div>
+                    <div style="text-align: left">
+                        <span class="medium-text-2">SAC:</span> 996411
+                    </div>
+                </div>
+
+                <div class="ticket-info-4">
+                    <div style="text-align: left">
+                        <span class="medium-text-2"
+                            >Commence Journey within 3 Hrs or Dept of First<br />
+                            Train</span
+                        >
+                    </div>
+                    <div
+                        style="
+                            text-align: left;
+                            padding-top: 7px;
+                            position: absolute;
+                        "
+                    >
+                        R26180
+                    </div>
+                    <div style="text-align: right; padding-top: 4px">
+                        <span class="medium-text-1" id="stationDistance"
+                            >Distance: 118 km</span
+                        >
+                    </div>
+                    <div style="text-align: left; padding-top: 7px">
+                        Booking Time:<span class="medium-text-2" id="dateTime"
+                            >19/10/2024 15:05</span
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="ticket-container-2">
+                <div class="warning-1">
+                    It is recommended not to perform factory reset or change
+                    your handset whenever you are having valid ticket in the
+                    mobile.
+                    <a href="#" style="color: #f90"
+                        >Click for Changing Handset with Valid Ticket</a
+                    >
+                </div>
+                <div class="warning-2">
+                    FOR MEDICAL EMERGENCY/FIRST AID, CONTACT TICKET CHECKING
+                    STAFF/GUARD OR DIAL 139
+                </div>
+
+                <div class="btn-container">
+                    <a href="#" class="btn">OPEN QR CODE</a>
+                    <a href="#" class="btn">NEXT TRAINS TO BUXAR.</a>
+                    <a href="#" class="btn">OK</a>
+                </div>
+            </div>
+            <footer>
+                &nbsp; &nbsp; &nbsp; &nbsp;Center for Railway Information
+                Systems (CRICS)
+            </footer>
+        </div>
+        <!-- <button id="fullscreen-btn" class="full-screen">Go Fullscreen</button> -->
+
+        <button id="fullscreen-btn" class="fullscreen-button">
+            <svg
+                viewBox="0 0 448 512"
+                height="1em"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"
+                ></path>
+            </svg>
+        </button>
+
+        <!-- <button id="download-btn" class="btn">Download Screenshot</button> -->
+        <script src="/assets/stationNameDict.js"></script>
+
+        <script>
+            // document
+            //     .getElementById("download-btn")
+            //     .addEventListener("click", function () {
+            //         html2canvas(document.getElementById("capture-area")).then(
+            //             (canvas) => {
+            //                 const link = document.createElement("a");
+            //                 link.href = canvas.toDataURL("image/png");
+            //                 link.download = "train_ticket_screenshot.png";
+            //                 link.click();
+            //             }
+            //         );
+            //     });
+
+            const fullscreenButton = document.getElementById("fullscreen-btn");
+
+            fullscreenButton.addEventListener("click", () => {
+                if (!document.fullscreenElement) {
+                    document.documentElement
+                        .requestFullscreen()
+                        .catch((error) => {
+                            console.error(
+                                "Error trying to enable full-screen mode:",
+                                error
+                            );
+                        });
+
+                    fullscreenButton.remove();
+                    // fullscreenButton.textContent = "Exi";
+                } else {
+                    document.exitFullscreen();
+                    // fullscreenButton.textContent = "Go Fullscreen";
+                }
+            });
+
+            function openFullscreen() {
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                }
+            }
+
+            const userTypedInput = {
+                fromStationCode: "BUX",
+                toStationCode: "PAT",
+                fareAmount: 75,
+                mobileNumber: "8092068857",
+                date: "19/10/2024",
+                dateTime: "19/10/2024 15:05",
+                trainType: "SUPERFAST",
+                stationDistance: "118 km",
+            };
+
+            document.getElementById(
+                "fareAmount"
+            ).textContent = `₹ ${userTypedInput["fareAmount"]}.00/-`;
+            document.getElementById("mobileNumber").textContent =
+                userTypedInput["mobileNumber"];
+            document.getElementById("date").textContent =
+                userTypedInput["date"];
+            document.getElementById("dateTime").textContent =
+                userTypedInput["dateTime"];
+            document.getElementById("trainType").textContent =
+                userTypedInput["trainType"];
+            document.getElementById(
+                "stationDistance"
+            ).textContent = `Distance: ${userTypedInput["stationDistance"]}`;
+            document.getElementById(
+                "fromStation"
+            ).innerHTML = `<span>बक्सर<br/>BUXAR</span>`;
+            document.getElementById(
+                "toStation"
+            ).innerHTML = `<span>पटना जं.<br/>PATNA Jn.</span>`;
+        </script>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Train Ticket</title>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.js"></script>
+
+        <style>
+            body {
+                font-family: "Roboto", sans-serif;
+                font-weight: 500;
+                font-size: 14.5px;
+                background-color: #f5f5f5;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                height: 90%;
+            }
+
+            .ticket-container-1 {
+                margin-top: 55px;
+                background-color: #f1baf1;
+                border-radius: 7px 7px 0 0;
+                width: 335px;
+                padding: 15px;
+                box-shadow: 0 4px 8px rgba(33, 33, 33, 0.1);
+            }
+
+            .ticket-container-2 {
+                background-color: #ffffff;
+                border-radius: 0 0 7px 7px;
+                width: 365px;
+                box-shadow: 0 4px 8px rgba(33, 33, 33, 0.1);
+                /* margin-bottom: 50px; */
+            }
+
+            .ticket-info-1 {
+                border-top: 1.5px solid #493079;
+                border-bottom: 1.5px solid #493079;
+                padding: 5px 0px 25px 0px;
+            }
+
+            .ticket-info-2 {
+                padding: 5px 0px 15px 0px;
+            }
+
+            .ticket-info-3 {
+                border-top: 1.5px solid #493079;
+                padding: 5px 0px 5px 0px;
+            }
+
+            .ticket-info-4 {
+                border-top: 1px solid rgba(88, 34, 158, 0.3);
+                padding: 5px 0px 5px 0px;
+            }
+
+            .medium-text-1 {
+                font-family: "Roboto", sans-serif;
+                font-weight: 400;
+                font-size: 12px;
+            }
+
+            .medium-text-2 {
+                font-family: "Roboto", sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+            }
+
+            .warning-1 {
+                padding: 10px 0px 0px 17px;
+                font-family: "Roboto", sans-serif;
+                font-weight: 400;
+                font-size: 13px;
+                margin-bottom: 10px;
+                color: #5f687a;
+            }
+
+            .warning-2 {
+                padding: 2px 0px 0px 7px;
+                font-size: 12px;
+                color: #f00;
+                text-align: center;
+            }
+
+            .btn-container {
+                padding: 0px 10px 20px 9px;
+                margin-left: 7px;
+                margin-right: 7px;
+                margin-top: 15px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+            }
+
+            footer {
+                position: fixed;
+                bottom: 0;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .btn {
+                padding: 7px;
+                text-align: center;
+                background: linear-gradient(90deg, #ff8c5f, #ff4e88);
+                color: white;
+                border-radius: 39px;
+                font-size: 14px;
+                text-decoration: none;
+            }
+
+            .btn:hover {
+                opacity: 0.9;
+            }
+
+            .scrolling-text {
+                position: absolute;
+                white-space: nowrap;
+                font-size: 1.5rem;
+                color: #345998;
+                animation: scroll-text 4s linear infinite;
+                z-index: 1;
+                margin-top: 12px;
+                font-weight: 200;
+                font-size: 22px;
+            }
+
+            /* Keyframes for text animation */
+            @keyframes scroll-text {
+                0% {
+                    transform: translateX(90%);
+                }
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+
+            .fullscreen-button {
+                border: none;
+                /* background-color: white; */
+            }
+
+            .left-image,
+            .right-image {
+                position: absolute;
+
+                /* transform: translateY(-50%); */
+                width: 30px; /* Set the width of the images */
+                height: auto;
+                z-index: 2; /* Place images above the text */
+                margin-top: 8px;
                 margin-right: 9px;
             }
 
