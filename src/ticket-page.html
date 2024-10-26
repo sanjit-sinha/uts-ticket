@@ -45,7 +45,7 @@
                 border-radius: 0 0 7px 7px;
                 width: 365px;
                 box-shadow: 0 4px 8px rgba(33, 33, 33, 0.1);
-                margin-bottom: 80px;
+                margin-bottom: 50px;
             }
 
             .ticket-info-1 {
@@ -106,8 +106,9 @@
                 flex-direction: column;
                 gap: 9px;
             }
-            footer{
+            footer {
                 margin-top: 20px;
+                background-color: #493079;
             }
 
             .btn {
@@ -124,9 +125,9 @@
                 opacity: 0.9;
             }
 
+
             .scrolling-text {
                 position: absolute;
-                /* top: 50%; */
                 white-space: nowrap;
                 font-size: 1.5rem;
                 color: #333;
@@ -135,18 +136,21 @@
 
             /* Keyframes for text animation */
             @keyframes scroll-text {
-                from {
-                    transform: translateX(100px);
+                % {
+                    transform: translateX(30%);
                 }
-                to {
-                    transform: translateX(-10%);
+                100% {
+                    transform: translateX(-100%);
                 }
             }
         </style>
     </head>
 
     <body>
-        <div class="scrolling-text">IR Unreserved Ticketing</div>
+
+        <span class="scrolling-text">IR Unreserved Ticketing</span>
+
+
         <div class="ticket-container-1" id="ticket">
             <div style="text-align: left; padding-bottom: 12px">
                 HAPPY JOURNEY
