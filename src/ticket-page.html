@@ -403,7 +403,6 @@
             //     });
 
             const fullscreenButton = document.getElementById("fullscreen-btn");
-
             fullscreenButton.addEventListener("click", () => {
                 if (!document.fullscreenElement) {
                     document.documentElement
@@ -423,43 +422,29 @@
                 }
             });
 
-            function openFullscreen() {
-                if (document.documentElement.requestFullscreen) {
-                    document.documentElement.requestFullscreen();
-                }
-            }
+            let toStation = document.querySelector("#toStation");
+            let fromStation = document.querySelector("#fromStation");
+            let dateTime = document.querySelector("#dateTime");
+            let date = document.querySelector("#date");
+            let mobileNumber = document.querySelector("#mobileNumber");
+            let fareAmount = document.querySelector("#fareAmount");
+            let trainType = document.querySelector("#trainType");
+            let stationDistance = document.querySelector("#stationDistance");
 
-            const userTypedInput = {
-                fromStationCode: "BUX",
-                toStationCode: "PAT",
-                fareAmount: 75,
-                mobileNumber: "8092068857",
-                date: "19/10/2024",
-                dateTime: "19/10/2024 15:05",
-                trainType: "SUPERFAST",
-                stationDistance: "118 km",
-            };
+            let userTypedInput = JSON.parse(sessionStorage.getItem("myDict"));
+            console.log(userTypedInput);
 
-            document.getElementById(
-                "fareAmount"
-            ).textContent = `₹ ${userTypedInput["fareAmount"]}.00/-`;
-            document.getElementById("mobileNumber").textContent =
-                userTypedInput["mobileNumber"];
-            document.getElementById("date").textContent =
-                userTypedInput["date"];
-            document.getElementById("dateTime").textContent =
-                userTypedInput["dateTime"];
-            document.getElementById("trainType").textContent =
-                userTypedInput["trainType"];
-            document.getElementById(
-                "stationDistance"
-            ).textContent = `Distance: ${userTypedInput["stationDistance"]}`;
-            document.getElementById(
-                "fromStation"
-            ).innerHTML = `<span>बक्सर<br/>BUXAR</span>`;
-            document.getElementById(
-                "toStation"
-            ).innerHTML = `<span>पटना जं.<br/>PATNA Jn.</span>`;
+            fromStationCode = userTypedInput["fromStationCode"];
+            toStationCode = userTypedInput["toStationCode"];
+
+            fareAmount.textContent = `₹ ${userTypedInput["fareAmount"]}.00/-`;
+            mobileNumber.textContent = userTypedInput["mobileNumber"];
+            date.textContent = userTypedInput["date"];
+            dateTime.textContent = userTypedInput["dateTime"];
+            trainType.textContent = ` ${userTypedInput["trainType"]}`;
+            stationDistance.textContent = "Distance: 119 km";
+            fromStation.innerHTML = `<span>${stationNameDict[fromStationCode]["hindi_name"]}<br/>${stationNameDict[fromStationCode]["english_name"]}</span>`;
+            toStation.innerHTML = `<span>${stationNameDict[toStationCode]["hindi_name"]}<br/>${stationNameDict[toStationCode]["english_name"]}</span>`;
         </script>
     </body>
 </html>
