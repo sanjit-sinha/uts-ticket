@@ -454,6 +454,10 @@
                     })
                 );
 
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                }
+
                 window.location.href = "ticket-page.html";
             }
         </script>
