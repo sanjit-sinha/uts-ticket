@@ -402,6 +402,13 @@
             //         );
             //     });
 
+            window.onload = function () {
+   document.documentElement.requestFullscreen().catch((err) => {
+      console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+   });
+};
+            
+
             const fullscreenButton = document.getElementById("fullscreen-btn");
             fullscreenButton.addEventListener("click", () => {
                 if (!document.fullscreenElement) {
